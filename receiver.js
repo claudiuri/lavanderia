@@ -23,9 +23,8 @@ async function createChannel(conn, name) {
 (async () => {
   const conn = await amqplib.connect('amqps://wkotyzcl:IoK4joK4cFZAh8QVf_1JUTQa_T3aQbuF@stingray.rmq.cloudamqp.com/wkotyzcl');
 
-  // for (let filial of ["1", "2", "3", "4", "5"]) {
-  for (let filial of ["1"]) {
-
+  for (let filial of ["1", "2", "3", "4", "5"]) {
     await createChannel(conn, filial)
   }
+  console.log("Todas as filiais foram criadas!")
 })();

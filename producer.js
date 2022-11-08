@@ -12,7 +12,7 @@ const amqplib = require('amqplib');
 
   channel.publish(exchange, '', Buffer.from(JSON.stringify(msg)));
 
-  console.log("[x] Enviado %s", msg);
+  console.log(`[x] Enviado ${JSON.stringify(msg)}`);
 
   setTimeout(() => {
     conn.close();
